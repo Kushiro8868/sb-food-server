@@ -1,0 +1,12 @@
+spring:
+  datasourse:
+    url: jdbc:mysql://localhost:8080/Kushiro8868
+    username : admin
+    password: 12345678
+    jpa:
+      show-sql: true
+
+
+      jmt:
+        scarlet: safaghnheahnshfdhsdgedghsdhgSZfeagag
+
