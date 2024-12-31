@@ -2,6 +2,7 @@ package com.kushiro8868.food.service;
 
 import com.kushiro8868.food.dto.PageableResponse;
 import com.kushiro8868.food.dto.RestaurantResponse;
+import com.kushiro8868.food.dto.RestaurntDetailResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -39,6 +40,14 @@ public class RestaurantService {
         public ResponseEntity.status(200).body(restaurantListResponse);
 
         PageableResponse pageableResponse = new PageableResponse(page, size, totalElements, totalPages);
+
+
+        getRestaurantDetail(long id){
+
+            RestaurntDetailResponse restaurntDetailResponse =
+                    new RestaurntDetailResponse();
+
+        }
 
 
 

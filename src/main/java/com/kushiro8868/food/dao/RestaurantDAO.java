@@ -1,6 +1,7 @@
 package com.kushiro8868.food.dao;
 
 import com.block.food.dto.RestaurantResponse;
+import com.kushiro8868.food.dto.MenuResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -120,6 +121,20 @@ public class RestaurantDAO {
         }
 
 
+    }
+
+
+    public List<MenuResponse>(long id){
+        String sql = "SELECT r.id, r.name, r.category, r.address, r.phone, r.description, \n" +
+                "\t\t\tIFNULL(  avg(rv.rating) , 0)  avg_rating   ,\n" +
+                "\t\t\tcount(rv.id)  review_count,\n" +
+                "\t\t\tr.created_at\n" +
+                "from restaurant r\n" +
+                "left join review  rv\n" +
+                "on r.id = rv.restaurant_id\n" +
+                "where r.id = ? \n" +
+                "group by r.id ;";
+        return jdbcTemplate.queryForObject(sql, new RestaurantRowMapper(), id);
     }
 
 
