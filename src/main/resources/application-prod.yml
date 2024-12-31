@@ -1,0 +1,14 @@
+spring:
+  datasourse:
+    url: jdbc:mysql://hi-db.czkea22cgu9e.ap-northeast-2.rds.amazonaws.com:3306/food_db
+    username : admin
+    password: 21052105
+    jpa:
+      show-sql: true
+
+
+      jmt:
+        scaret: safaghnheahnshfdhsdgedghsdhgSZfeagag
+
+        server:
+          port: 80

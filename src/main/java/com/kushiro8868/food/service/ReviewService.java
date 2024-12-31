@@ -12,10 +12,10 @@ public class ReviewService {
     @Autowired
     JwtConfig jwtConfig;
 
-    creatdReview(String torken, Long menuId, String content, Integer score) {
+    public int creatdReview(String torken, Long menuId, String content, Integer score) {
         Long userId = Long.parseLong( jwtConfig.getTokenClaims(token).getSubject() );
 
-        reviewDAO.createReview(userId, reviewRequest);
+        return reviewDAO.createReview(userId, reviewRequest);
 
     }
 }

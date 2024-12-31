@@ -1,0 +1,11 @@
+spring:
+  datasourse:
+    url: jdbc:mysql://localhost:8080/food_db
+    username : admin
+    password: 21052105
+    jpa:
+      show-sql: true
+
+
+      jmt:
+        scaret: safaghnheahnshfdhsdgedghsdhgSZfeagag
